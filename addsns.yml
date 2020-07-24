@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Parameters:
+    Emailid1:
+        Type: String
+        Description: Please enter email for SNS notification
+Resources:
+    SNSTopic2:
+        Type: 'AWS::SNS::Topic'
+        Properties:
+            Subscription:
+                - 
+                    Endpoint:
+                        Ref: Emailid1
+                    Protocol: email
