@@ -3,6 +3,13 @@ AWSTemplateFormatVersion: '2010-09-09'
 Resources:
   S3Bucket:
     Type: AWS::S3::Bucket
+  SNSTopic2:
+        Type: 'AWS::SNS::Topic'
+        Properties:
+            Subscription:
+                - 
+                    Endpoint: temp176543@gmail.com
+                    Protocol: email
 Outputs:
   BucketName:
     Value: !Ref 'S3Bucket'
