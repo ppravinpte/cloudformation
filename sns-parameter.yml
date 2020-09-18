@@ -2,7 +2,7 @@ AWSTemplateFormatVersion: '2010-09-09'
 Parameters:
     SNSEmail:
         Type: String
-        Description: Enter email for SNS notification
+        Description: Enter email for SNS notification as input.
 Resources:
     AlertSNSTopic:
         Type: 'AWS::SNS::Topic'
