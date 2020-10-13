@@ -54,3 +54,10 @@ Resources:
         FromPort: '22'
         IpProtocol: tcp
         ToPort: '22'
+Outputs:
+  ApachehomeURL:
+    Description: Apache Website
+    Value: !Sub "http://${WebServer.PublicDnsName}"
+  PHPWebsiteURL:
+    Description: PHP Website
+    Value: !Sub "http://${WebServer.PublicDnsName}/phpinfo.php"
